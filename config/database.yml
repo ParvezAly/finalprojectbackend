@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: postgres
+  password: root
+
+development:
+  <<: *default
+  database: travel_north
+
+production:
+  <<: *default
+  database: travel_north
+
+
+test:
+  <<: *default
+  database: travel_north_test
